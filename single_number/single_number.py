@@ -4,8 +4,18 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    arr.sort()
+    first = 0
+    second = 1
 
-    pass
+    while first < len(arr) - 1:
+        if arr[first] == arr[second]:
+            first += 2
+            second += 2
+        else:
+            return arr[first]
+    return arr[first]
+
 
 
 if __name__ == '__main__':
